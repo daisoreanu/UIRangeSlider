@@ -10,3 +10,6 @@ How To Use
 3. Change the class of the UIView to UIRangeSlider in left panel -> Identity Inspector 
 4. Adjust the settings you want in the left panel -> Attributes Inspector
 5. Used Drag and drop to set the delegate of the newly created UIRangeSlider to your files owner
+
+
+![Demo Project](https://drive.google.com/file/d/0B4f7KioAL2tPZll2TFY0Q3poUDQ/view?usp=sharing)
