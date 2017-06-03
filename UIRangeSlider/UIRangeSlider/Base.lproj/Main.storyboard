@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIRangeSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-Ei-5X3" customClass="UIRangeSlider" customModule="UIRangeSlider" customModuleProvider="target">
+                                <rect key="frame" x="16" y="57" width="288" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="to3-lw-UZk"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fv9-Mz-y9p"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Positive Range enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWc-S9-T1q">
+                                <rect key="frame" x="16" y="28" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="D0H-ie-fgI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Positive Range dissabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGN-pg-A1B">
+                                <rect key="frame" x="16" y="93" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7ad-GB-gOI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xl-aj-vN2" customClass="UIRangeSlider" customModule="UIRangeSlider" customModuleProvider="target">
+                                <rect key="frame" x="16" y="122" width="288" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="iSh-uC-9Bi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isNegativeRangeEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1VA-vs-a1E"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OS UISlider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNz-MX-crx">
+                                <rect key="frame" x="16" y="158" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vsf-0S-QMk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cEw-9H-ABm">
+                                <rect key="frame" x="14" y="187" width="292" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Wcd-lx-NyP"/>
+                                </constraints>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Xl-aj-vN2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="3jJ-oB-I6Q"/>
+                            <constraint firstAttribute="trailing" secondItem="NR4-Ei-5X3" secondAttribute="trailing" constant="16" id="9hf-4q-MZF"/>
+                            <constraint firstItem="tGN-pg-A1B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="JP2-Rt-n2F"/>
+                            <constraint firstAttribute="trailing" secondItem="ZNz-MX-crx" secondAttribute="trailing" constant="16" id="JUg-PK-4BM"/>
+                            <constraint firstAttribute="trailing" secondItem="lWc-S9-T1q" secondAttribute="trailing" constant="16" id="OVA-ef-C7i"/>
+                            <constraint firstItem="0Xl-aj-vN2" firstAttribute="top" secondItem="tGN-pg-A1B" secondAttribute="bottom" constant="8" id="Uhb-fi-52z"/>
+                            <constraint firstItem="lWc-S9-T1q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Z9w-7o-XFu"/>
+                            <constraint firstItem="ZNz-MX-crx" firstAttribute="top" secondItem="0Xl-aj-vN2" secondAttribute="bottom" constant="8" id="bWp-ch-3bm"/>
+                            <constraint firstItem="ZNz-MX-crx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="cGI-Sg-Qh1"/>
+                            <constraint firstAttribute="trailing" secondItem="0Xl-aj-vN2" secondAttribute="trailing" constant="16" id="kK1-AB-wf1"/>
+                            <constraint firstAttribute="trailing" secondItem="cEw-9H-ABm" secondAttribute="trailing" constant="16" id="mcZ-4K-Qkv"/>
+                            <constraint firstItem="NR4-Ei-5X3" firstAttribute="top" secondItem="lWc-S9-T1q" secondAttribute="bottom" constant="8" id="p6p-X0-cYr"/>
+                            <constraint firstItem="lWc-S9-T1q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="tlk-Fj-bRv"/>
+                            <constraint firstItem="cEw-9H-ABm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="vbg-eX-pwJ"/>
+                            <constraint firstItem="tGN-pg-A1B" firstAttribute="top" secondItem="NR4-Ei-5X3" secondAttribute="bottom" constant="8" id="wAI-OG-oEX"/>
+                            <constraint firstItem="cEw-9H-ABm" firstAttribute="top" secondItem="ZNz-MX-crx" secondAttribute="bottom" constant="8" id="yAv-6f-Cci"/>
+                            <constraint firstAttribute="trailing" secondItem="tGN-pg-A1B" secondAttribute="trailing" constant="16" id="zQA-4z-vA3"/>
+                            <constraint firstItem="NR4-Ei-5X3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="za7-eP-VN5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174.375" y="-13.732394366197184"/>
+        </scene>
+    </scenes>
+</document>
